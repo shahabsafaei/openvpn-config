@@ -1,0 +1,4 @@
+[submodule "User/Windows/openvpn-windows"]
+	path = User/Windows/openvpn-windows
+	url = https://gitlab.com/ShahabSafaei/openvpn-windows
+	branch = master
