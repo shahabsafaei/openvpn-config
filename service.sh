@@ -11,5 +11,5 @@ ExecStart=openvpn .openvpn
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target" | tee /etc/systemd/system/openvpn.service
+WantedBy=multi-user.target" | tee bg.sh
 echo "Place your openvpn config at $HOME/.openvpn"
