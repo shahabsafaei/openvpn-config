@@ -11,5 +11,5 @@ ExecStart=openvpn .openvpn
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target" | tee User/Linuxbg.sh
+WantedBy=multi-user.target" | tee User/Linux/bg.sh
 echo "Place your openvpn config at $HOME/.openvpn"
