@@ -1,15 +1,19 @@
 #!/bin/bash
-sudo echo "[Unit]
+
+cat << EOF | sudo tee > /etc/systemd/system/openvpn.service &&\
+echo "Place your openvpn config at $HOME/.openvpn" &&\
+sudo systemctl daemon-reload
+[Unit]
 Description=Ovpn service
 
 [Service]
 Type=simple
 User=root
 Group=root
-WorkingDirectory=$HOME
+WorkingDirectory=\$HOME
 ExecStart=openvpn .openvpn
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target" | tee User/Linux/bg.sh
-echo "Place your openvpn config at $HOME/.openvpn"
+WantedBy=multi-user.target
+EOF
